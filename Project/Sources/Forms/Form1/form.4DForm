@@ -1,0 +1,88 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "Tag from Text",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"WA_TAGS": {
+					"type": "webArea",
+					"left": 23,
+					"top": 182,
+					"width": 510,
+					"height": 300,
+					"events": [
+						"onLoad"
+					],
+					"method": "ObjectMethods/WA_TAGS.4dm",
+					"dataSource": "",
+					"webEngine": "embedded",
+					"methodsAccessibility": "all",
+					"sizingX": "grow",
+					"sizingY": "grow"
+				},
+				"Prompt": {
+					"type": "input",
+					"left": 23,
+					"top": 47,
+					"width": 510,
+					"height": 65,
+					"sizingX": "grow",
+					"dataSource": "Form:C1466.prompt"
+				},
+				"Button": {
+					"type": "button",
+					"text": "Generate tag",
+					"top": 121,
+					"left": 23,
+					"width": 216,
+					"height": 26,
+					"events": [
+						"onClick"
+					],
+					"textAlign": "center",
+					"method": "ObjectMethods/Button.4dm"
+				}
+			}
+		}
+	],
+	"geometryStamp": 39,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}

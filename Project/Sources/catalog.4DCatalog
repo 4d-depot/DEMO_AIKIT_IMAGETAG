@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="testTag" uuid="C7E1E01947674AC58AE4F56228D82B9F" collation_locale="en-gb">
+	<schema name="DEFAULT_SCHEMA"/>
+	<table name="Pictures" uuid="A7EB83B8278E4FC380EFA95F3279FE6E" id="1">
+		<field name="ID" uuid="5E34AB74DE24421EB21E4096FE2DEFBD" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="terms" uuid="83E73CFC64074673B2450EA9DAA18D46" type="21" blob_switch_size="2147483647" id="2"/>
+		<field name="prompt" uuid="8E559B25B6884685800AF12F15ADC9AC" type="10" limiting_length="255" id="3"/>
+		<field name="picture" uuid="8274502F5E284F24B1D442D1E06665B2" type="18" id="4"/>
+		<primary_key field_name="ID" field_uuid="5E34AB74DE24421EB21E4096FE2DEFBD"/>
+	</table>
+	<table name="Keywords" uuid="592E3DC9EF264451A190BBC555A18799" id="2">
+		<field name="ID" uuid="28977CE076FA414C9E0A21065EC64DC6" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="keyword" uuid="1D20F33EB3EA49D28B2AE3EDDD3F0084" type="10" limiting_length="255" id="2"/>
+		<primary_key field_name="ID" field_uuid="28977CE076FA414C9E0A21065EC64DC6"/>
+	</table>
+	<table name="PictureKeywords" uuid="E8AF46584D8B432087E9130876362B1F" id="3">
+		<field name="ID" uuid="C67D100E51574481A388E9CEAC5638CF" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="IDKeywords" uuid="145136D5853B4A8FA21E282C3356F1D8" type="4" not_null="true" id="2"/>
+		<field name="IDPictures" uuid="6553615F609A4151878B03BF6032DEB4" type="4" not_null="true" id="3"/>
+		<primary_key field_name="ID" field_uuid="C67D100E51574481A388E9CEAC5638CF"/>
+	</table>
+	<relation uuid="F85CA0F53C104C8E8DF9EC32640E0EB8" name_Nto1="Pictures_to_PictureKeywords" name_1toN="PictureKeywords_to_Pictures" state="1">
+		<related_field kind="source">
+			<field_ref uuid="5E34AB74DE24421EB21E4096FE2DEFBD" name="ID">
+				<table_ref uuid="A7EB83B8278E4FC380EFA95F3279FE6E" name="Pictures"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="6553615F609A4151878B03BF6032DEB4" name="IDPictures">
+				<table_ref uuid="E8AF46584D8B432087E9130876362B1F" name="PictureKeywords"/>
+			</field_ref>
+		</related_field>
+	</relation>
+	<relation uuid="61C752C57BCD4447AACC0DAC20BD27FB" name_Nto1="Keywords_to_PictureKeywords" name_1toN="PictureKeywords_to_Keywords" state="1">
+		<related_field kind="source">
+			<field_ref uuid="28977CE076FA414C9E0A21065EC64DC6" name="ID">
+				<table_ref uuid="592E3DC9EF264451A190BBC555A18799" name="Keywords"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="145136D5853B4A8FA21E282C3356F1D8" name="IDKeywords">
+				<table_ref uuid="E8AF46584D8B432087E9130876362B1F" name="PictureKeywords"/>
+			</field_ref>
+		</related_field>
+	</relation>
+	<index kind="regular" unique_keys="true" uuid="5796CB4293F14DA8AD35A798E12AEFD0" type="7">
+		<field_ref uuid="5E34AB74DE24421EB21E4096FE2DEFBD" name="ID">
+			<table_ref uuid="A7EB83B8278E4FC380EFA95F3279FE6E" name="Pictures"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="64DE80A4FD0547AFAE2039A6A05C188C" type="1">
+		<field_ref uuid="145136D5853B4A8FA21E282C3356F1D8" name="IDKeywords">
+			<table_ref uuid="E8AF46584D8B432087E9130876362B1F" name="PictureKeywords"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="A249A50EFB3848F6ABAC9E3D220F7014" type="7">
+		<field_ref uuid="28977CE076FA414C9E0A21065EC64DC6" name="ID">
+			<table_ref uuid="592E3DC9EF264451A190BBC555A18799" name="Keywords"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="A85FBB9A026E4B3F878BF73B01F7311C" type="7">
+		<field_ref uuid="6553615F609A4151878B03BF6032DEB4" name="IDPictures">
+			<table_ref uuid="E8AF46584D8B432087E9130876362B1F" name="PictureKeywords"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="CF42B167E31D4FF98B2CC10DDA569868" type="7">
+		<field_ref uuid="C67D100E51574481A388E9CEAC5638CF" name="ID">
+			<table_ref uuid="E8AF46584D8B432087E9130876362B1F" name="PictureKeywords"/>
+		</field_ref>
+	</index>
+	<base_extra>
+		<journal_file journal_file_enabled="true"/>
+	</base_extra>
+</base>

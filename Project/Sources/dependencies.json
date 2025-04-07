@@ -1,0 +1,9 @@
+{
+	"dependencies": {
+		"4DPop XLIFF Pro": {
+			"github": "vdelachaux/4DPop-XLIFF-Pro",
+			"version": "latest"
+		},
+		"OpenAI": {}
+	}
+}

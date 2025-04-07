@@ -1,0 +1,8 @@
+{
+	"webforms.renderer.indexPage": "UploadPage",
+	"webforms.display-mode": "neutral",
+	"webforms.i18n": {
+		"supported": [],
+		"primary": ""
+	}
+}
