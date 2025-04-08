@@ -1813,22 +1813,21 @@
 				"events": [
 					{
 						"type": "method",
-						"dataclass": "PicturesEntity",
+						"dataclass": "DataStore",
 						"events": [
 							"onclick"
 						],
-						"id": "tiSUBSYMV4BFd5fR7Dqz1Q",
-						"method": "$This.get6FirstElements",
+						"id": "nQ6j7ct7NxgYXfFZe4n7Mx",
+						"method": "ds.get6FirstElements",
 						"params": [
 							{
 								"name": "selectedEntity",
 								"type": "cs.PicturesEntity",
 								"datasource": "$This",
-								"id": "wE9a3BdSB1ynoEk9FTtQA2"
+								"id": "wtbTxvZTsjgLk7jvjdBwH8"
 							}
 						],
-						"namespace": "",
-						"datasource": "searchResults",
+						"datasource": "",
 						"returns": {
 							"name": "result",
 							"type": "cs.KeywordsSelection",

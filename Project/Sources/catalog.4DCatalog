@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
-<base name="testTag" uuid="C7E1E01947674AC58AE4F56228D82B9F" collation_locale="en-gb">
+<base name="DEMO_AIKIT_IMAGETAG" uuid="C7E1E01947674AC58AE4F56228D82B9F" collation_locale="en-gb">
 	<schema name="DEFAULT_SCHEMA"/>
 	<table name="Pictures" uuid="A7EB83B8278E4FC380EFA95F3279FE6E" id="1">
 		<field name="ID" uuid="5E34AB74DE24421EB21E4096FE2DEFBD" type="4" unique="true" autosequence="true" not_null="true" id="1"/>

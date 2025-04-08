@@ -112,13 +112,13 @@ exposed Function promptApi($urlInputText : Text; $isUrl : Boolean; $isIA : Boole
 	End for each 
 	return $pictureEntity
 	
-	// Function to get keywords associated with a picture
+	// GET KEYWORDS ASSOCIATED WITH A PICTURE
 exposed Function getPictureKeywords($pictureEntity : cs:C1710.PicturesEntity) : cs:C1710.KeywordsSelection
 	var $keywordsSelection : cs:C1710.KeywordsSelection
 	$keywordsSelection:=ds:C1482.Keywords.query("Keywords_to_PictureKeywords.IDPictures = :1"; $pictureEntity.ID)
 	return $keywordsSelection
 	
-	// Function to retrieve the first 6 keywords of a picture
+	// RETRIEVE THE FIRST 6 KEYWORDS OF A PICTURE
 exposed Function get6FirstElements($selectedEntity : cs:C1710.PicturesEntity) : cs:C1710.KeywordsSelection
 	var $firstSixKeywordsSelection : cs:C1710.KeywordsSelection
 	$firstSixKeywordsSelection:=ds:C1482.Keywords.newSelection()

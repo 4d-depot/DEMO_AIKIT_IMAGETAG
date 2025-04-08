@@ -1,3 +1,4 @@
+
 Class extends EntitySelection
 
 Function FilterEntitiesByKeywords($searchText : Text) : cs:C1710.PicturesSelection
@@ -60,4 +61,3 @@ Function FilterEntitiesByKeywords($searchText : Text) : cs:C1710.PicturesSelecti
 	End for each 
 	
 	return $filteredEntities
-	
